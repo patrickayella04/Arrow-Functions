@@ -13,7 +13,7 @@
 // const sayHello = () => console.log('Hello'); 
 
 
-// One line returns
+// One line returns - 
 // const sayHello = () => 'Hello'; // This is how we return something without writing return, but to get the information we will have to console.log the function. 
 
 // Same as above
@@ -21,5 +21,20 @@
 //     return 'Hello';
 // }
 
+// console.log(sayHello());
 
-console.log(sayHello());
+// Return Object
+// const sayHello = () => ({ msg: 'Hello' }) // where you can run into trouble is when you'er returning an object literal. Basically because js is looking at the braces and everything in it as the function body, instead of an object literal. To fix this we wrap the object literal in parenthesis. Now it will log the object. 
+
+// console.log(sayHello());
+
+
+// single parameter does need parenthesis
+// const sayHello = name => console.log(`Hello ${name}`);
+
+// Multiple parameters need parenthesis
+const sayHello = (firstName, lastName) => console.log(`Hello ${firstName} ${lastName}`);
+
+
+
+sayHello('Brad', 'Traversy');
